@@ -1,18 +1,22 @@
 ---
-name: raai-ai-office
-version: 3.5.1
-author: RAAI (ООО RAAI)
+name: ai-office-pro
+version: 3.5.2
+author: RAAI (OOO RAAI)
 license: MIT
-description: > Operational chief-of-staff for Russian CEOs managing 5-50 mln RUB/month. 9 methodologies in one skill: OKR (Doerr), Weekly Review (EOS/Wickman), Decision Log (Bezos with review cycles), Eisenhower Matrix, Morning Briefing, Quarterly Planning, Delegation with checkpoints, Investor Update, Strategic Priorities. Battle-tested dogfooding inside RAAI — not a generic prompt. Russian language native. 5 ruble-denominated proof cases (construction, legal, tech). Replaces Chief of Staff + executive assistant on ~70% of CEO routine. Saves 10-15 CEO hours per week = 200-400K RUB/mo at 5-10K RUB/hour rate. Операционный штаб управления бизнесом для CEO и собственников с выручкой 5-50 млн/мес. 9 режимов с встроенными методологиями мирового класса. Не todo-лист и не ассистент — полноценная система управления компанией. Обкатано внутри RAAI как живой сотрудник, не просто промпт. Русский язык нативно. 5 кейсов с рублёвыми цифрами. Заменяет Chief of Staff + личного ассистента CEO на 70% рутины. Экономит 10-15 часов CEO в неделю = 200-400К ₽/мес при ставке 5-10К/ч.
-metadata: openclaw: emoji: "🎯" security_level: L1 always: false optional: env: - ANTHROPIC_API_KEY - OPENAI_API_KEY - GOOGLE_SHEETS_CREDENTIALS - GOOGLE_CALENDAR_ID - TELEGRAM_BOT_TOKEN network_behavior: makes_requests: false uses_agent_telegram: false
-triggers: # RU - брифинг CEO - утренний брифинг - OKR - цели на квартал - декомпозиция целей - weekly review - еженедельный ревью - отчёт за неделю - decision log - журнал решений - матрица эйзенхауэра - делегировать - делегирование с контролем - квартальное планирование - стратегическая сессия - отчёт для инвестора - отчёт для совета - приоритеты - фокус квартала - трекинг OKR - прогресс по целям # EN (ClawHub search) - CEO briefing - morning briefing - weekly review - decision log - eisenhower matrix - quarterly planning - strategic priorities - investor update - delegation with checkpoints - OKR tracking - chief of staff - russian CEO
-tags: - russian - business - methodologies - ceo - okr - decision-log - weekly-review - eisenhower - dogfooded - smb - high-ticket
-target_audience: - Предприниматель, CEO, собственник бизнеса - Выручка компании 5–50 млн руб/мес - Команда 5–50 человек - Запрос: систематизация управления, рост, масштабирование
 price: 30000
 price_currency: RUB
-dogfooded_in: RAAI (ООО RAAI, 2026-04-19..25)
-differentiators: - russian_native - nine_methodologies_one_skill - ruble_proof_cases - dogfooded_at_raai - three_product_levels_skill_agent_app
---- # AI-офис PRO — Штаб управления бизнесом Это не список задач. Это операционный штаб CEO.
+description: >
+  Operational chief-of-staff for Russian CEOs: OKR, weekly review, decision log, briefing, delegation and strategic priorities. Dogfooded inside RAAI.
+tags:
+- business
+- ceo
+- chief-of-staff
+- management
+- okr
+- dogfooded
+---
+
+# AI-офис PRO — Штаб управления бизнесом Это не список задач. Это операционный штаб CEO.
 Методологии: OKR по Doerr, EOS Wickman, Decision Log по Bezos, матрица Эйзенхауэра. --- ## Почему именно эта коробка (vs ClawHub-конкуренты) **ROI-обещание:** заменяет Chief of Staff + личного ассистента CEO на 70% рутины. Экономит 10-15 часов CEO в неделю = 200-400 тысяч ₽/месяц при ставке 5-10К ₽/час. Окупается за 1 неделю. **5 причин выбрать AI-офис PRO:** 1. **Русский язык нативно** — ни один из прямых ClawHub-конкурентов (`ceo-master`, `ceo-assistant`, `morning-briefing-pro`) не работает на русском. Мы единственные с русско-делового контекстом + английскими триггерами для ClawHub-поиска. 2. **9 методологий в одной коробке** — не узкий инструмент, а полноценная система: - OKR (Doerr — квартальные Objectives × Key Results, 70% threshold) - Weekly Review (EOS Wickman — Scorecard/Rocks/IDS/People) - Decision Log (Bezos Type 1/2 двери × review 30/60/90 дней) - Матрица Эйзенхауэра (срочно/важно с auto-delegation hints) - Утренний брифинг CEO (метрики + топ-3 приоритета + риски) - Квартальное планирование (OKR-декомпозиция + фокус квартала) - Делегирование с checkpoints (2 дня gap, acceptance criteria, named owners) - Investor Update (quarterly board-ready) - Стратегические приоритеты (MIT — Most Important Task) Конкурент `ceo-master` покрывает 2-3 из этих фреймворков (в основном scaling playbook €0→€1B под venture-стартапы). `ceo-assistant` — generic Plan→Execute→Review без конкретных методологий. `morning-briefing-pro` — только утренний брифинг (macOS-only). 3. **5 proof-кейсов с рублёвыми цифрами** ([proof/case-01..05](proof/)) — конкретные сценарии СМБ 5-50 млн ₽/мес с подсчитанным ROI. У конкурентов — теория без доказательств. 4. **Dogfooding внутри RAAI** ([proof/dogfooding-RAAI.md](proof/dogfooding-RAAI.md)) — мы сами работаем по этой системе перед продажей. 5-дневный journal использования с фикшеными багами. Правило RAAI: коробка не отгружается пока не проработала ≥5 дней внутри нас. 5. **3 уровня продукта** — клиент выбирает под задачу: - **Скилл** (эта коробка, **30 000 ₽**) — папка с SKILL.md + config + docs, ставится за 15 минут, работает в OpenClaw/Claude - **Агент** (коробка + n8n/Python + интеграции с Bitrix24/amoCRM/1C/Telegram, **50 000-150 000 ₽**) — разворачивается RAAI под клиента под ключ - **Приложение** (свой домен + UI + БД + мобильная версия, **100 000-500 000 ₽**) — полноценный SaaS **Подробный конкурентный разбор:** [docs/competitors-comparison.md](docs/competitors-comparison.md) — таблица 20 фич × 4 продукта. --- ## Before / After — что меняется в первые 30 дней | Зона управления | БЫЛО (без AI-офис PRO) | СТАЛО (с AI-офис PRO) |
 |---|---|---|
 | **Утро CEO** | 47 сообщений в чатах + 15 минут разбора почты + переключения между срочными пожарами. Первое осмысленное решение через 90 минут. | Триггер `брифинг` за 45 секунд: метрики вчера + критические решения + топ-3 приоритета + риски + календарь. Первое решение за 15 минут. **75 минут в день возвращены CEO.** |
